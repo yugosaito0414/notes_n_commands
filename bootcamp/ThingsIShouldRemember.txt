@@ -1,0 +1,41 @@
+touch
+-make files
+
+mkdir
+-make folders
+
+mv
+-to change name
+
+Camel Case 
+-ex. IAmTheGreatest
+
+Snake Case 
+-ex. I_am_the_greatest
+
+rm
+removing files 
+
+rmdir
+removing directory or folders 
+
+nano 
+write some text 
+
+directory is blue icon or folder 
+
+file is the one that i am writing. ending words like txt.
+
+
+
+ls -a 
+to know if git is there. if the txt is uploaded on remote repository.
+
+git remote add origin URL 
+
+To create remote location 
+
+Git Push Origin 
+To upload my shit to remote repository. 
+
+
