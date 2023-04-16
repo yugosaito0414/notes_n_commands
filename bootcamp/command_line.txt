@@ -1,0 +1,21 @@
+
+
+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
+token
+
+1013  git branch
+ 1014  ls -a
+ 1015  git pull origin main
+ 1016  ls -a
+ 1017  cat test.txt
+ 1018  nano test.txt
+ 1019  cat test.txt
+ 1020  git diff
+ 1021  git status
+ 1022  ls -a
+ 1023  git diff
+ 1024  ls -a
+ 1025  git status
+ 1026  git add .
+ 1027  git commit -m "two files updated"
+ 1028  git push origin main
