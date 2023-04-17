@@ -8,7 +8,7 @@ mv
 -to change name
 
 Camel Case 
--ex. IAmTheGreatest
+-ex. MoreLikeThis
 
 Snake Case 
 -ex. I_am_the_greatest
@@ -24,8 +24,8 @@ write some text
 
 directory is blue icon or folder 
 
-file is the one that i am writing. ending words like txt.
-
+file is the one that i am writing. 
+Ending words like txt.
 
 
 ls -a 
