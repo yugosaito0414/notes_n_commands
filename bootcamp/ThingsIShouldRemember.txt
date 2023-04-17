@@ -36,6 +36,6 @@ git remote add origin URL
 To create remote location 
 
 Git Push Origin 
-To upload my shit to remote repository. 
+To upload my stuff to remote repository. 
 
 
