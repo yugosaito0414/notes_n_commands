@@ -1,0 +1,42 @@
+cp - copy 
+syntax 
+cp original.txt duplicate.txt
+
+mv -rename a file 
+syntax
+mv course.txt old-course.txt
+
+mkdir - make a file
+rmdir - remove a file
+
+~ shortcut for home directory
+
+Head - it prints the first few lines of a file 
+In command line, it will print 10 lines.
+In python, it will create 5 lines.
+
+head -n 3 seasonal/summer.csv
+
+Command line flag - 
+-n is meant to signal "number of lines"
+
+Tail - show bottom 10 lines
+Head - show first 10 lines
+
+grep - find a word 
+syntax 
+grep bicuspid seasonal/winter.csv
+
+-c: print a count of matching lines rather than the lines themselves
+-h: do not print the names of files when searching multiple files
+-i: ignore case (e.g., treat "Regression" and "regression" as matches)
+-l: print the names of files that contain matches, not the matches
+-n: print line numbers for matching lines
+-v: invert the match, i.e., only show lines that don't match
+
+
+How can I store a command's output in a file?
+head -n 5 seasonal/summer.csv > top.csv
+The greater-than sign > tells the shell to redirect head's output to a file. 
+
+
