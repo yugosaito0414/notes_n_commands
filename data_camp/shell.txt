@@ -40,3 +40,59 @@ head -n 5 seasonal/summer.csv > top.csv
 The greater-than sign > tells the shell to redirect head's output to a file. 
 
 
+
+Cut - select the first column from the spring data;
+Example below.
+
+cat seasonal/spring.csv
+ate,Tooth
+017-01-25,wisdom
+2017-02-19,canine
+2017-02-24,canine
+2017-02-28,wisdom
+2017-03-04,incisor
+2017-03-12,wisdom
+2017-03-14,incisor
+2017-03-21,molar
+2017-04-29,wisdom
+2017-05-08,canine
+2017-05-20,canine
+2017-05-21,canine
+2017-05-25,canine
+2017-06-04,molar
+2017-06-13,bicuspid
+2017-06-14,canine
+2017-07-10,incisor
+2017-07-16,bicuspid
+2017-07-23,bicuspid
+2017-08-13,bicuspid
+2017-08-13,incisor
+2017-08-13,wisdom
+2017-09-07,molar
+
+cut -d , -f 1 seasonal/spring.csv
+Date
+2017-01-25
+2017-02-19
+2017-02-24
+2017-02-28
+2017-03-04
+2017-03-12
+2017-03-14
+2017-03-21
+2017-04-29
+2017-05-08
+2017-05-20
+2017-05-21
+2017-05-25
+2017-06-04
+2017-06-13
+2017-06-14
+2017-07-10
+2017-07-16
+2017-07-23
+2017-08-13
+2017-08-13
+2017-08-13
+2017-09-07
+

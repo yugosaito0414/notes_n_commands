@@ -1,0 +1,10 @@
+How can I count the records in a file?
+The command wc (short for "word count")
+
+How can I specify many files at once?
+wildcards *
+cut -d , -f 1 seasonal/*
+
+How can I sort lines of text?
+sort
+By default it does this in ascending alphabetical order, but the flags -n and -r can be used to sort numerically and reverse the order of its output.
