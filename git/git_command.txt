@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository
+
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+.DS_Store
+
+echo .DS_Store >> .gitignore
+
+git add .gitignore
+git commit -m '.DS_Store banished!'
+
+
+
+既存の.DS_Storeファイルをリポジトリから削除します。
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+
+次の行を追加します。
+.DS_Store
+
+このファイルは.gitignoreリポジトリの最上位にあります (ファイルがまだ存在しない場合は作成します)。これは、トップディレクトリで次のコマンドを使用して簡単に実行できます。
+echo .DS_Store >> .gitignore
+
+次に、ファイルをリポジトリにコミットします。
+git add .gitignore
+git commit -m '.DS_Store banished!'
