@@ -1,0 +1,130 @@
+Ram 
+Storage. 
+short-term memory for computers to place its data for easy access.
+Random-access memory is a form of computer memory that can be read and changed in any order, typically used to store working data and machine code.
+
+The processor -CPU (central processing unit)
+Very fast 
+Cannot store a lot.
+
+Hard Drive is very slow. 
+Can store a lot. 
+
+Hz is smoothness of screen 
+A 60Hz refresh rate means that the screen is refreshing itself 60 times every second.
+120Hz, it's refreshing itself 120 times every second. 
+This is different from frame rate, which is how many times per second the source sends a new frame.
+
+frames per second
+32 FPS is ok 
+15 is lagging 
+
+Serverless Computing
+- AWS Lambda 
+
+EC2 and AWS works essentially the same. 
+
+Application programming interfaces (APIs)
+a way for one program to interact with another. 
+
+S3 is the storage made by AWS
+RDS - Relational Database service
+
+S3
+No limit 
+99.9 durability 
+Optimized pricing.
+
+RDS
+Automatically back up datas
+
+Dynamo DB
+Big data 
+No-sql
+
+Ddos attack
+Most DDoS attacks are done with botnets – groups of computers all acting together. 
+its when someone denies your internet connection by clogging it up with spam. 
+imagine the driveway to your house. you can usually drive in and out of it fine when theres no traffic. 
+if theres a few hundred cars of traffic on your street, its going to be hard and time consuming to get out of your driveway. 
+DDOS is when some mean person sends those 100 cars of traffic to drive in front of your house for the sole purpose of not letting you out. your driveway is your internet
+
+Latency 
+time delay between the cause and the effect of some physical change in the system being observed.
+データ転送における指標のひとつで、転送要求を出してから実際にデータが送られてくるまでに生じる、通信の遅延時間のことをいいます。 この遅延時間が短いことをレイテンシが小さい（低い）、遅延時間が長いことをレイテンシが大きい（高い）と表現しています。
+
+Cloudfront 
+Protection service (Ddos attack)
+Reduce latency 
+
+Route 53 
+You can buy domain name
+
+API gateway
+You can block incoming API
+
+AWS cloudwatch
+Monitoring 
+Scheduling events
+Use metrics
+Make alarm
+Tract the usage of metrics
+If you know how to use cloudwatch, you can optimize resource. 
+GDPR (General Data Protection Regulation)
+
+AWS cloudtrail 
+You can track all activity 
+Log activity and who did it.
+Detect unusual activity
+
+aws cloudfundation 
+Automation of deploy and delete resources.
+Infrastructure as a code
+Scaling region and accounts 
+You can manage resources as code. 
+You can track the evolution of the application.
+
+AWS I AM 
+Identity and access management 
+Access permission to limitation 
+No extra charges to bill
+
+Steps example of AWS.
+
+1.Security set up with fine-grained access privileges management
+
+2.Account activity logging
+
+3.User database currently under MySQL
+
+4.Recipes database currently under MongoDB (a popular NoSQL database)
+
+5.Media files storage: images, videos…
+
+6.Code handling data access and manipulation in a serverless fashion
+
+7.API interface to access their services
+
+8.Monitoring usage KPIs and triggering alerts accordingly
+
+Answers:
+1.iam 
+2.cloudtail 
+3.RDS 
+4.DynamoDB 
+5.S3 
+6.Lambda 
+7.API gateway 
+8.Cloudwatch 
+
+Well-architected framework 
+Operational excellence 
+Security 
+Reliability 
+Cost optimization 
+Perfomance efficiency 
+
+Well-architected framework AWS allows better risk management!
+
+Encourage team to experiment and take risks and escalate concerns.
+

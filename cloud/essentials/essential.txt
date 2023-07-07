@@ -1,0 +1,376 @@
+Objects (files) are stored in bucket (directories).
+
+cloud computing?
+On-demand delivery of IT resources and applications through the internet with pay-as-you-go pricing.
+
+Infrastructure as a service 
+EC2 is virtual computer machine(VM)
+Essentially this is a brain of the computer. 
+It does all process works.(processor)it does all the computing works.
+
+Keep the sensitive data to private cloud. 
+Direct connect talks to each other (public cloud and private cloud)
+
+Region > AZ > data centers > edge location.
+AZ contains a multiple server locations.
+Ex. 
+Region U.S
+AZ Virginia 
+Data center 1b server 
+
+Fault tolerance - still run. 
+AZ connect to each other 
+Ex. Osaka data center is not working, still Tokyo server is working.
+
+Edge location does not contain any physical server. 
+It helps deliver content faster.
+Reduce latency. 
+
+AZ associate with only one region. 
+
+Edge location is called amazon CloudFront. 
+
+Many AZ, so operation(application) won't fail or crush.
+
+AWS management console - web browser for AWS
+
+
+When you start AWS, your default VPC is set by the AWS. 
+
+You can navigate though command line as well. It's called command line interface. (CLI)
+
+Cloud deployment model 
+There are 3 models.
+
+Capital expenses
+Stuff you buy
+
+Variable expenses 
+It is not fixed. It inflates sometimes. 
+
+Instances - they don't consider as serverless bc it actually exist In data center.
+EC2 - elastic compute cloud.
+
+Database contains information like name, email address. 
+
+Mouse cursor - GUI (graphical user interface)
+
+Secure shell(SSH) - shell means login. So, secure login. 
+You often use SSH for GitHub. With SSH, you can access remote machine with Command line. 
+First, you generate a key. Prove your identity. 
+
+Reserved instances 
+You can pick pay-upfront, partially upfront, and no upfront. 
+
+Dedicated host - server just for you. 
+
+Cloud licensing - if you want to use Microsoft, you will need license for that when you want to use on cloud. 
+
+EC2 auto scaling - add and delete automatically across AZs. 
+Elastic load balancing - distribute all incoming traffic to multiple instances. 
+So auto scaling and load balancing works at the same time.
+
+
+Vertical scaling - upgrading. CPU and RAM
+
+Horizontal scaling - you are just adding servers. 
+
+AWS instance servers are called instances. 
+
+Operating system - he is the manager's computer. 
+You can interact operating system with command line or graphic UI.
+
+ AWS lambda - developers only focus on code, not server. 
+Serverless means, AWS take care of server for you. 
+You can write pretty much any code on AWS console. 
+When you upload file to S3, it triggers lambda and that stores data into DynamoDB.
+
+Lambda - change by number of request and duration.
+1 million free request. 
+
+AWS fargate - container (serverless)
+
+AWS lightsail - this is for a beginner. They will not charge too much. 
+For example, my portfolio or Wordpress. 
+
+AWS outpost- allows you to run clouds services in your internal data center. 
+Remain on premises due to latency of data sovereignty. 
+Support hybrid deployment model. 
+
+AWS batch - process large task into smaller task. 
+Ex. Send emails 1000 instead of 5000 at the same time.
+
+Simple storage services - s3 is object holding services for the cloud. 
+Objects (files) are stored in bucket (directories).
+Unlimited storage. 
+Can be public or private. 
+You can upload though console or command line. 
+You can set security at bucket level or individual level using access control list. 
+
+Enable versioning - create a multiple files so in case you delete you will still have it. 
+You can roll back to previous version. 
+
+S3 access logs to track down any suspicious activity. 
+
+Bucket name must be globally unique meaning that name cannot be used by anyone else but you in any AWS regions unless that bucket is deleted.
+
+Data accessibility 
+Durability - my data is going to be there tomorrow?
+You expect your data to be there.   
+S3 has 11 9s of durability. 
+This happens bc they replicate objects in the multiple servers. 
+You can set up cross-regional replication. If you want, but you have to be the one to set it up.
+
+throughput - the number of units that can be produced by a production process within a certain period of time. 
+
+S3 is recommend for using access frequently data. 
+
+Intelligent tiring - automatically put data into most efficient storage class.
+Recommended for new application, data lake. 
+Data with unknown changes. 
+
+S3 infrequent data - less expensive than s3 
+Store long live data 
+
+S3 one zone infrequent data - objects can be lost. 
+But cheaper. Stored in one single AZ.
+recreateable data. 
+
+S3 glacier 
+- for long term data.
+Cheap storage option
+3 retrieval option. 
+
+S3 deep archive 
+- two retrieval option. 
+Data only access once or twice a year. 
+Availability is low.
+
+S3 outputs - provide data on premise
+
+S3 for Static website 
+Use cloud front to distribute globally.
+
+Achieving data for aws glacier. 
+
+Analytics for redshift.
+
+S3 transfer acceleration for mobile app. 
+
+Instance is that serverless virtual machine(resource). 
+
+Instance needs some Elastic block store(EBS). 
+You can detach EBS to another instance.
+
+
+Elastic file system - share drive
+EBS is a storage device in instance. Think as flash drive. 
+You can put many EBS into instance but you cannot put EBS into multiple instances.
+Tied to one AZ, so if you want to move, you need to replicate. 
+
+EC2 instance store - physically attached to an instance. 
+Very fast.
+
+Amazon elastic file system - sharing file on instance.
+
+Storage gateway - connect on-premises and cloud data.
+Hybrid model.
+
+AWS backups - backups across multiple services 
+
+Content delivery network(CDN) - deliver content quickly. 
+Delivers data. 
+
+AWS front cloud uses edge location to cache content - meaning copy files and contents. 
+BC latency gets lower. 
+
+It is important to use cloud front (contains files and cache files). If it is not there, AWS request to the S3 buckets or E2 instance. 
+Ex. Static content
+IP address blocking
+
+Amazon global accelerator 
+- AWS has global network infrastructure. So it fasters up. 
+
+S3 transfer acceleration - improve upload and download to and from s3 buckets. 
+
+Cloud front allows global distribution. 
+Ddos protection and geo-restriction. 
+
+Virtual private cloud (VPC) is like a fence 
+Protecting networking environment including ip address, subnets and network gateway. 
+
+AWS is shared cloud with everyone. But in the VPC is all yours. 
+
+Private subnet is not on internet. (Database)
+Public subnet, you can access through Internet. (Frontend part)
+
+
+VPC peering allows you to connect 2 vpcs together. 
+
+IP address -internet protocol address 
+IPv4 - internet protocol version 4 
+IP address is a number for a computer. 
+
+IPv4におけるIPアドレスは「xxx.xxx.xxx.xxx」のように、ピリオドで区切られた4つの数字で表されます。使うことができるのは「0.0.0.0」から「255.255.255.255」までで、約43億個のIPアドレスが発行できるようになっています。
+
+Domain name system (DNS) - access website with Domain name
+Every computer in the internet has IP address. 
+Ip adress = domain name. So you can directly type IP address to go to website if you can remember. 
+Domain nam was just created for human to understand easiy. 
+
+Route 53 - routes users to application. It check health check on AWS model. supports Hybrid model.
+
+AWS direct connect - it connects on-premises and center of AWS through private network. 
+AWS direct connect is used when you transfer big data or hybrid model. 
+
+AWS VPN (Virtual public network )travels though public network. 
+Cheaper than AWS direct connect 
+On premises is internal data center. 
+
+VPC > subnet - little category. split network inside of VPC.
+
+API gateway - build and manage IPI meaning this happens when clients try to access our website. API gateway directs to Lambda and Lambda directs to or get info from RDS (database).
+
+Database stores data.
+AWS - relational database, aurora, dynamo DB (NOSQL)
+
+Netptune - graph database. Used for social media. 
+
+documentDB for document 
+
+RDS supports famous database engines such as PostgresSQL, Microsoft SQL, ORAClE.
+Using multiple AZs.
+
+AWS maintenance the operating system, backups and so on. 
+
+Amazon aurora - mySQL, postgressSQL
+5x faster than regular postgressSQl
+Scales automatically- if you need more space, AWS do it for you.
+Managed by RDS. (Hardware provisioning, software patching, setup, configuration, backups.)
+RDS > Amazon Aurora
+
+nonSQL - If the data can be stored in a relatively structured manner with rows and columns then use SQL. If the data is highly unstructured then do not use SQL.
+
+Dynamo DB - NonSQL provided by AWS. Key value database.
+
+Migrate on-premises Oracle to AWS - use RDS. 
+
+Alleviate database load for data that is access often - elasticache
+
+DocumentDB supports mangoDB
+Dynamo DB is for nonSQL
+
+Database migration service (DMS) - migrate om premis data to AWS. 
+Support homogenous or heterogenous migration. Meaning oracle to oracle or oracle to SQL server. 
+No downtime meaning your source database remain operational. 
+
+Server migration service (server migration service)
+You can actually migrate server not database. 
+
+Server will be saved as AMI (Amazon machine image)
+Use AMI to launch server as instance. 
+
+Snowball is actually cheaper than internet transfer. 
+
+Dataync allows online transfer. 
+On-premises to storage such as s3 
+Can be copied or replicated into a multiple regions or accounts.
+
+Snowmobile - exabytes scale of data. 
+
+Snowmobile - petabyte of data. 
+
+Athena - query service 
+Analyze s3 data using SQL.
+Pay per query. 
+
+Glue - it prepare your data
+
+Kinesis - analyze video or streaming data in real time.
+
+EMR (elastic mapreduce)
+
+Data pipeline - move data 
+
+Quick sight - place where you can see graph or visualized data. 
+
+Redshift is that data warehouse solution. 
+
+Artificial intelligence - normally human do things but teaches computers to do things. Like playing chess with CPU. 
+
+Cloud 9 you can write code in cloud. (IDE)
+
+Codecommit - GitHub
+
+Code build - you can test code before you launch application. 
+
+
+Code pipe line - automate release process. 
+Add automation to the building, testing, and any development of application. 
+CI/CD continuous integration and continuous delivery. 
+
+
+Codedeploy to deploy your stuff. 
+
+X-ray - helps analyse debug. 
+
+Codestar - you can collaborate with your team. 
+
+
+Infrastructure as code (command line for AWS)- you can script (write) to provision (create) AWS resources.
+
+It is reproductive manner and saves time. 
+
+Elastic beanstalk - users access to application, goes to application load balancers. Auto scaling group work with EC2 instances. This all happens with the click of button of Elastic beanstalk. 
+Deploy application only on AWS. Not on-premises. 
+
+Opsworks - automate software configuration and infrastructure management for your application. 
+Uses chef or pubbets (automated platforms)
+
+Loose coupling - it's a good thing. It reduces the risk of cascading failure. 
+
+SQS - message queues support loose coupling. Order:FIFO(First in, First out.)
+Ex. money transferring system. Your friend send money. The process is not yet completed but the person gets notification. Some later on, the receiver gets the money. 
+
+Simple notification server (SNS)- application send you notification. 
+Send or email or text. 
+
+SNS works with cloundwatch.
+SES is email bc it is html and it is easy for macerating team to get information. 
+
+Cloudwatch - collect data such as log, metrics and events. Set alarm. Detect anomaly. Visualize log. 
+Notify when ES2 instances above 50% utilization. 
+
+Amazon workspace - employee can work from home bc you host virtual desktop in the cloud. 
+
+Connect create help desk in the cloud. 
+
+AWS - security of the cloud. Infrastructure that runs AWS. (Hard wear, software, networking, facility.) 
+software - they will manage lambda or other software for you. 
+
+Users - security in the cloud. 
+
+6 AWS pillars 
+Operational excellence - support operational workload. 
+Security 
+Reliability - work consistency and recover quickly. 
+Perfomance efficiency - how well you used cloud for your business. Use serverless cloud. Bc its already optimized for you. 
+
+Cost optimization 
+Sustainability 
+
+Identity
+- who can assess resources
+
+Access 
+- what resources they can access 
+
+Authentication - who
+Authorization what the user can access to.
+
+
+
+
+
+
+
