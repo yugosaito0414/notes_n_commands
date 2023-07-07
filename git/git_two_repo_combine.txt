@@ -1,0 +1,51 @@
+https://qiita.com/baby-0105/items/3a819d25c905dc8bcb19
+
+git add .で警告。warning: adding embedded git repository:
+
+警告内容
+$ git add .
+warning: adding embedded git repository: リポジトリ名
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint:     git submodule add <url> リポジトリ名
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint:     git rm --cached リポジトリ名
+hint: 
+hint: See "git help submodule" for more information.
+
+ー　原因は？　ー
+コミットしようとしたプロジェクトのフォルダの中に、別に取り込んできたリポジトリがあるからステージングできない
+
+思い当たることと言えば、確かにcloneしたリポジトリへ別のリポジトリのものを取り込んできていました。
+原因はそこでしたね。
+
+そして、解決策は？
+
+
+
+
+
+
+解決法
+
+そこで一度/.gitをを削除します。
+
+- $ rm -rf リポジトリ名/.git
+
+これで、$ git add .は問題なくパスできます。
+
+しかし、続いてはコミット＆プッシュができない。
+
+そこで今度は以下のコマンドを打ちました。
+
+- $ mv リポジトリ名 subfolder_tmp
+- $ git submodule deinit リポジトリ名
+- $ git rm --cached リポジトリ名
+- $ mv subfolder_tmp リポジトリ名
+- $ git add リポジトリ名
