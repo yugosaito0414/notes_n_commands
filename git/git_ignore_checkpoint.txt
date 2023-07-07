@@ -1,0 +1,25 @@
+https://stackoverflow.com/questions/35916658/how-to-git-ignore-ipython-notebook-checkpoints-anywhere-in-repository
+
+
+リポジトリ内の任意の場所で ipython ノートブック チェックポイントを git 無視する方法
+
+
+これは主に git に関する質問です。ipython ノートブックをコミットしたいのですが、チェックポイントを無視します。
+
+リポジトリには複数のフォルダーがあり、それぞれに ipython ノートブックが含まれているため、単一のディレクトリを無視するだけでは問題は解決されません。気にせずにノートブックが入った新しいフォルダーをどんどん追加していきたいです。
+
+私の予感としては、*/.ipynb_checkpoints/ というフォルダー内のすべてのものを gitignore するためにワイルドカードを使用する方法があるはずですが、それを理解することができませんでした。
+
+
+.gitignore に追加する場合:
+
+.ipynb_checkpoints
+(どこにもスラッシュはありません)、リポジトリ内のその名前のファイルまたはディレクトリは無視されます。パスは、 を含めた場合にのみチェックされます/。
+
+この回答から、コンピューターにグローバル gitignore を設定することもできます。
+
+
+ここがやるとこ。
+
+- git config --global core.excludesfile '~/.gitignore'
+- echo '.ipynb_checkpoints' >> ~/.gitignore
