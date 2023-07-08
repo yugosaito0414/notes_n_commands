@@ -1,0 +1,11 @@
+参考動画
+
+https://www.youtube.com/watch?v=9HS_rd1Kz3A&ab_channel=HuXnWebDev
+
+Git log 
+
+git commit --amend -m "好きな名前"
+
+Git log で確認。
+
+Commit 
